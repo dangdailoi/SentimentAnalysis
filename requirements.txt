@@ -1,4 +1,5 @@
 torch
+pickle
 numpy
 pandas
 seaborn
