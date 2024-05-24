@@ -1,35 +1,35 @@
 # Sentiment Analysis Application
 
-## Giới thiệu
-Ứng dụng "Sentiment Analysis" là một dự án phân tích cảm xúc cho các đánh giá nhà hàng sử dụng Python và Flask. Ứng dụng cho phép người dùng nhập đoạn văn bản, phân tích cảm xúc và hiển thị hình ảnh tương ứng với kết quả phân tích.
+## Introduction
+The "Sentiment Analysis" application is a project for analyzing restaurant reviews using Python and Flask. The application allows users to input text, analyze its sentiment, and display an image corresponding to the analysis result.
 
-## Về Dữ liệu
-- **Nguồn**: [Restaurant Review Sentiment Analysis](https://github.com/manthanpatel98/Restaurant-Review-Sentiment-Analysis/tree/master)
-- **Mô tả**: Dữ liệu bao gồm 10000 dòng và 8 cột.
-- **Cột sử dụng**: `Review` và `Rating`
-- **Mục tiêu**: Thực hiện phân tích cảm xúc bằng cách coi các đánh giá có điểm số trên 3 là "Positive" và dưới 3 là "Negative".
+## About the Data
+- **Source**: [Restaurant Review Sentiment Analysis](https://github.com/manthanpatel98/Restaurant-Review-Sentiment-Analysis/tree/master)
+- **Description**: The dataset includes 10,000 rows and 8 columns.
+- **Columns used**: `Review` and `Rating`
+- **Goal**: Perform sentiment analysis by classifying reviews with a rating above 3 as "Positive" and below 3 as "Negative".
 
-## Mô hình
-Dự án sử dụng 3 mô hình: Naive Bayes, SVM, và LSTM để đo lường hiệu suất và chọn mô hình tốt nhất.
+## Model
+The project uses three models: Naive Bayes, SVM, and LSTM to measure performance and select the best model.
 
-## Cấu trúc Thư mục
-- `app.py`: File chính chạy ứng dụng Flask.
-- `notebook.ipynb`: Notebook Jupyter chứa mã nguồn để huấn luyện và đánh giá các mô hình.
-- `requirements.txt`: Danh sách các thư viện Python cần thiết.
-- `index.html`: Giao diện web cho ứng dụng.
-- `label_encoder.pkl`: File lưu trữ label encoder.
-- `svm_model.pkl`: File lưu trữ mô hình SVM đã huấn luyện.
-- `tfidf_vectorizer.pkl`: File lưu trữ TF-IDF vectorizer.
+## Directory Structure
+- `app.py`: The main file to run the Flask application.
+- `notebook.ipynb`: Jupyter Notebook containing the code for training and evaluating the models.
+- `requirements.txt`: List of required Python libraries.
+- `index.html`: Web interface for the application.
+- `label_encoder.pkl`: File storing the label encoder.
+- `svm_model.pkl`: File storing the trained SVM model.
+- `tfidf_vectorizer.pkl`: File storing the TF-IDF vectorizer.
 
-## Hướng dẫn Cài đặt và Chạy Ứng dụng
-### Bước 1: Cài đặt các Thư viện Cần thiết
-Cài đặt các thư viện Python cần thiết bằng cách chạy lệnh sau:
+## Installation and Running Instructions
+### Step 1: Install Required Libraries
+Install the necessary Python libraries by running:
 ```bash
 pip install -r requirements.txt
 ```
 
-### Bước 2: Tạo Cấu trúc Thư mục
-Đảm bảo rằng các file và thư mục sau đã được tạo:
+### Step 2: Create Directory Structure
+Ensure the following files and directories are created:
 - `app.py`
 - `notebook.ipynb`
 - `requirements.txt`
@@ -38,43 +38,43 @@ pip install -r requirements.txt
 - `svm_model.pkl`
 - `tfidf_vectorizer.pkl`
 
-### Bước 3: Huấn luyện và Lưu Mô hình
-Mở và chạy notebook `notebook.ipynb` để huấn luyện và lưu trữ các mô hình.
+### Step 3: Train and Save the Model
+Open and run the `notebook.ipynb` to train and save the models.
 
-### Bước 4: Chạy Ứng dụng Flask
-Chạy ứng dụng Flask bằng lệnh:
+### Step 4: Run the Flask Application
+Run the Flask application using the command:
 ```bash
 python app.py
 ```
 
-### Bước 5: Kiểm tra Ứng dụng
-Mở trình duyệt web và truy cập [http://127.0.0.1:5000/](http://127.0.0.1:5000/) để xem ứng dụng hoạt động. Nhập đoạn văn bản và nhấn nút "Analyze" hoặc ấn phím "Enter" để xem kết quả phân tích cảm xúc.
+### Step 5: Test the Application
+Open a web browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to see the application in action. Enter text and click the "Analyze" button or press "Enter" to view the sentiment analysis results.
 
-## Giao diện
+## Interface
 
-Dưới đây là một số hình ảnh về giao diện của ứng dụng phân tích cảm xúc.
-### Khởi động ứng dụng
+Below are some images of the application's interface.
+### Application Launch
 <p align="center">
-  <img src="static/app.png" alt="Giao diện sử dụng">
+  <img src="static/app.png" alt="User Interface">
 </p>
 
-Sau khi chạy ứng dụng hãy mở trình trình web và truy cập [http://127.0.0.1:5000/](http://127.0.0.1:5000/) để xem ứng dụng hoạt động
+After running the application, open a web browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to see the application in action.
 
-### Trang chủ
+### Home Page
 
 <p align="center">
-  <img src="static/giaodien.png" alt="Giao diện sử dụng">
+  <img src="static/giaodien.png" alt="User Interface">
 </p>
 
-### Phân tích cảm xúc (Positive)
+### Sentiment Analysis (Positive)
 <p align="center">
-  <img src="static/positive.png" alt="Giao diện sử dụng">
+  <img src="static/positive.png" alt="User Interface">
 </p>
 
-### Phân tích cảm xúc (Negative)
+### Sentiment Analysis (Negative)
 <p align="center">
-  <img src="static/negative.png" alt="Giao diện sử dụng">
+  <img src="static/negative.png" alt="User Interface">
 </p>
 
-## Liên hệ
-Nếu có bất kỳ câu hỏi hoặc góp ý nào, vui lòng liên hệ qua email: dailoi.ddl@gmail.com.
+## Contact
+For any questions or feedback, please contact via email: dailoi.ddl@gmail.com.
