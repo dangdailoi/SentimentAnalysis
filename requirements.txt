@@ -10,4 +10,4 @@ nltk
 keras
 wordcloud
 tensorflow
-flask
+Flask
